@@ -1,0 +1,15 @@
+{
+    "name": "valorin/asyncphp",
+    "description": "Asynchronous PHP - Control and manipulate client-side Javascript from server-side PHP.",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "ajax",
+        "asynchronous"
+    ],
+    "homepage": "",
+    "autoload": {
+        "psr-0": {
+            "AsyncPhp": "src"
+        }
+    }
+}
