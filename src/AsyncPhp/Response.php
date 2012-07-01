@@ -1,6 +1,8 @@
 <?php
 namespace AsyncPhp;
-class Response{
+
+class Response
+{
     /**
      * Query specific element(s) using a CSS selector
      * Actions are nested:
@@ -10,7 +12,8 @@ class Response{
      * @param   String  $context    Context to search in
      * @return  Response\Query
      */
-    public function query($selector,$context){
+    public function query($selector, $context)
+    {
 
     }
 
@@ -49,3 +52,4 @@ class Response{
 
     }
 }
+
