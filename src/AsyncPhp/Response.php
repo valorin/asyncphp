@@ -4,6 +4,12 @@ namespace AsyncPhp;
 class Response
 {
     /**
+     * @var Array
+     */
+    protected $output = Array();
+
+
+    /**
      * Query specific element(s) using a CSS selector
      * Actions are nested:
      * Response->query("#element")->call('addClass', "newclass");
@@ -12,9 +18,11 @@ class Response
      * @param   String  $context    Context to search in
      * @return  Response\Query
      */
-    public function query($selector, $context)
+    public function query($selector, $context = null)
     {
-
+        $return   = new Response\Query($selector, $context);
+        $output[] = $return;
+        return $return;
     }
 
 
@@ -27,7 +35,9 @@ class Response
      */
     public function call($method, $args = null)
     {
-
+        $return   = new Response\Call($method, $args);
+        $output[] = $return;
+        return $return;
     }
 
 
@@ -39,7 +49,9 @@ class Response
      */
     public function script($script)
     {
-
+        $return   = new Response\Script($script);
+        $output[] = $return;
+        return $return;
     }
 
 
